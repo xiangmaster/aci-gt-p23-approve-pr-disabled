@@ -1,0 +1,10 @@
+id: P23-E01
+repository: aci-gt-p23-approve-pr-disabled
+visibility: public
+stage: P2
+rule: P2.3
+kind: experiment
+atomic_variable: "Actions approve-PR setting 关闭"
+expected_status: BLOCKED
+setup: AUTO_REST
+configuration_state: COMPLETE
