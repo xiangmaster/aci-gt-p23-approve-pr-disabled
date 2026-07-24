@@ -1,0 +1,14 @@
+name: Ground Truth P23-E01
+on:
+  workflow_dispatch:
+permissions:
+  pull-requests: write
+jobs:
+  fixture:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ground-truth target operation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pulls/1/reviews" -f event=APPROVE
